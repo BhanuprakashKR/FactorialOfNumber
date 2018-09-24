@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FactorialTest
+{
+    class FactorialNumber
+    {
+        static void Main(string[] args)
+        {
+            int Number;
+            Console.WriteLine("Enter Number check even or add\n");
+            Number = Convert.ToInt32(Console.ReadLine());
+            double fact = facto(Number);
+            Console.WriteLine("factorial of {0} is {1}",Number, fact);
+            Console.ReadLine();
+        }
+
+        public static double facto(int number)
+        {
+            if (number == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return number * facto(number - 1);
+            }
+
+        }
+     }
+}
